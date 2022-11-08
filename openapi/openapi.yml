@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: Chatbot OpenAPI
+  description: 'An OpenAPI for Chatbot'
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080/
+    description: Chatbot API Service
+
+# Paths supported by the server application
+paths:
+  /predict:
+    post:
+      operationId: predict
+      tags:
+        - message
+      summary: Enter a message to predict the intent
+      description: Enter a message to predict the intent
+      requestBody:
+        description:  Enter message
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: message to predict the intent
+      responses:
+        '200':
+          description: Successfully get the predicted message
+          content:
+            'application/json':
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string

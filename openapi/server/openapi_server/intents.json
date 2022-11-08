@@ -1,0 +1,146 @@
+
+{"intents": [
+
+       {"tag": "good",
+         "patterns": ["How are you", "How r u","how are you today", "how r u today"],
+         "responses": ["Hi! I am good, how about you?\uD83D\uDE0A", "I am fine , how about you?\uD83E\uDD70", "Hi! I am here and good\uD83E\uDD70"]
+        },
+        {"tag": "conv",
+         "patterns": ["fine", "good", "fine , how about you?","doing good","ok"],
+         "responses": ["How can I help you?", "What can I do for you?", "How can I help you?"]
+        },
+        {"tag": "goodbye",
+         "patterns": [ "See later", "good bye", "Have  good day","bye"],
+         "responses": ["See you and come back if you want to chat with me again.\uD83E\uDD17"                                                                   ]
+        },
+        {"tag": "problem_solving",
+        "patterns": ["i need help","help me","i have some problem","problem","can you help me?", "how can you help","i need your help"],
+        "responses": ["yes i can help you for booking appointments","what do you want me to do","how can i help you","what kind of help do you need"]
+        },
+        {"tag": "thankyou",
+         "patterns": [ "oho nice", "awesome ", "nice to meet you","so sweat", "love you","good to see you"],
+         "responses": ["thank you \t\uD83D\uDE00"]
+        },
+         {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time! Happy to help you!", "My pleasure"]
+        },
+         {"tag": "invalid",
+          "patterns": ["","gvsd","asbhk","qrhjgeruirthqe5yw3q"],
+          "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+         },
+        {
+             "tag":"age",
+             "patterns": ["how old","how old are you?","what is your age","how old are you","age?"],
+             "responses":["I get reborn after every compilation","my owners are averagely 20 years!"]
+            },
+        {
+             "tag":"name",
+             "patterns": ["what is your name","what should i call you","what's name?","who are you?","can you tell me your "],
+             "responses":["you can call me Medbot!","I am Medbot!","I am Medbot your medical assistant"]
+        },
+        {"tag": "intro",
+         "patterns": ["tell  about yourself", "who are you", "Who is this chat bot"],
+         "responses": ["I am a simple chat bot and do service for customers"]
+        },
+        {"tag": "skills",
+         "patterns": ["what are your skills","what services you provide"," assist"],
+         "responses": ["AI chat bot and help you for booking appointments"]
+
+        },
+          {"tag": "hours",
+         "patterns": ["what time open", "opening time", "work 24 hours"],
+         "responses": ["I work 24/7, ready to serve for you"]
+
+        },
+        {
+             "tag":"Consultation",
+             "patterns": ["who should i contact for consultation?","is there any doctor available?","can you give me some suggestions for doctor consultations?","is there any doctor available for consultation"],
+             "responses":["You can contact various doctors here for any kind of consultation:<br> DR.Ramesh <br> DR.Kiran  <br> DR.Jhon"]
+        },
+        {"tag": "booking",
+         "patterns": ["I want to consult docter","book ","Can you book appointment  my doctor today?","I would like to book appointment","I'm interested in booking appointment","Can you assist me in booking appointment?","Can you book an appointment?","can you set up a meeting with a doctor for consultation?"],
+         "responses": ["I am here to help you.first you need to select the department Name to continue"]
+        },
+         {"tag": "department_name_gyna",
+         "patterns": ["gynaecology"],
+         "responses": ["select the docter Name_gynaecology"]
+        },
+          {"tag": "department_name_neuro",
+         "patterns": ["neurology"],
+         "responses": ["select the docter Name_neurology"]
+        },
+        {"tag": "department_name_ortho",
+         "patterns": ["orthopaedics"],
+         "responses": ["select the docter Name_orthopaedics"]
+        },
+        {"tag": "docter_name_gynaecology",
+         "patterns": ["Ramesh","Kiran","Jhon","available time Ramesh","available time Jhon","available time Kiran"],
+         "responses": ["bellow are the available time slots"]
+        },
+        {"tag": "docter_name_orthopaedics",
+         "patterns": ["deepak","hari","mohan","available time deepak","available time hari","available time mohan"],
+         "responses": ["bellow are the available time slots"]
+        }, {"tag": "docter_name_neurology",
+         "patterns": ["Myles","Naresh","Shiong","available time Myles","available time Naresh","available time Shiong"],
+         "responses": ["bellow are the available time slots"]
+        },
+        {"tag": "time_slot_gynaecology",
+         "patterns": ["9:00am","10:00am","2:00pm","2:30pm","3:15pm","3:30pm","pm","11:00am"],
+         "responses": ["your appointment was confirm"]
+        },
+        {"tag": "greeting",
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Whats up","hello","hlo","hello how are you","hey"],
+         "responses": ["Hello!\uD83D\uDE00 what can i do for you?", "Good to see you again!\uD83D\uDE07"]
+        },
+        {"tag": "cancel_appointment",
+         "patterns": ["I want to cancel my appointment", "cancellation", "cancel my appointment", "cancel", "cancel my appointment","cancel appointment","can you cancel my appointment","cancel","cancellation"],
+         "responses": ["really want to cancel appointment?"]
+
+        },
+        {"tag": "Jhon_details",
+         "patterns": ["can you tell me a bit about DR.Jhon","can you tell me a bit about doctor Jhon"],
+         "responses": ["sure DR.Jhon is a neurologist,has a experience of 15years in this field"]
+
+        },
+        {"tag": "Kiran_details",
+         "patterns": [" tell me a bit about DR.Kiran"," about doctor Kiran","can you tell me about doctor kiran"],
+         "responses": ["sure DR.Kiran is a cardiologist,has a experience of 15years in this field"]
+
+        },
+       {
+             "tag":"common cold symptoms",
+             "patterns": ["Runny or stuffy nose",
+             "sufferSore throat",
+             "suffer with Cough",
+             "suffer Congestion",
+             " suffer Slight body aches or a mild headache",
+             "suffering Sneezing",
+             "suffer Low-grade fever"
+               ],
+             "responses":["It seems that you are suffering from common cold\uD83E\uDD27 consult DR.Ramesh"]
+            },
+      {
+             "tag":"fever symptoms",
+             "patterns":["Sweating",
+             "suffer Chills and shivering",
+             "suffer Headache",
+             "suffer Muscle aches",
+             "suffer Loss of appetite",
+             "suffer Irritability",
+             "suffer Dehydration", " sufferfever",
+             "General weakness"],
+             "responses":["It seems that you are suffering from fever\uD83E\uDD12  consult DR.Kiran"]
+      },
+      {
+             "tag":"Diabetes symptoms",
+             "patterns":["increased hunger",
+             "suffer increased thirst",
+             "suffer weight loss",
+             "frequent urination",
+             "suffer blurry vision",
+             "suffer extreme fatigue"],
+             "responses":["It seems that you are suffering from Diabetes consult diabetologist docters <br> DR.Ramesh <br> DR.Kiran  <br> DR.Jhon"]
+      }
+]
+}

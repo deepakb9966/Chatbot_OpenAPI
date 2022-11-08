@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  description: An OpenAPI for Chatbot
+  title: Chatbot OpenAPI
+  version: 0.0.1
+servers:
+- description: Chatbot API Service
+  url: http://localhost:8080/
+paths:
+  /predict:
+    post:
+      description: Enter a message to predict the intent
+      operationId: predict
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/predict_request'
+        description: Enter message
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/predict_200_response'
+          description: Successfully get the predicted message
+      summary: Enter a message to predict the intent
+      tags:
+      - message
+      x-openapi-router-controller: openapi_server.controllers.message_controller
+components:
+  schemas:
+    predict_request:
+      properties:
+        message:
+          description: message to predict the intent
+          title: message
+          type: string
+      title: predict_request
+      type: object
+    predict_200_response:
+      example:
+        message: message
+      properties:
+        message:
+          title: message
+          type: string
+      title: predict_200_response
+      type: object
