@@ -10,11 +10,13 @@ This example uses the [Connexion](https://github.com/zalando/connexion) library 
 ## Requirements
 Python 3.5.2+
 
+
 ## Usage
 To run the server, please execute the following from the root directory:
 
 ```
 pip3 install -r requirements.txt
+pip install tensorflow --no-cache-dir
 python3 -m openapi_server
 ```
 

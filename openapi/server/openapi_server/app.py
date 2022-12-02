@@ -2,6 +2,10 @@ import os
 import random
 import json
 import pickle
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 import connexion
 import numpy as np
@@ -15,10 +19,10 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('/home/deep/Desktop/chatbot/openapi/server/openapi_server/intents.json').read())
-words = pickle.load(open('/home/deep/Desktop/chatbot/openapi/server/openapi_server/words.pkl', 'rb'))
-labels = pickle.load(open('/home/deep/Desktop/chatbot/openapi/server/openapi_server/labels.pkl', 'rb'))
-model = load_model('/home/deep/Desktop/chatbot/openapi/server/openapi_server/chatbot_model.h5')
+words = pickle.load(open('/workspaces/Chatbot_OpenAPI/openapi/server/openapi_server/words.pkl', 'rb'))
+labels = pickle.load(open('/workspaces/Chatbot_OpenAPI/openapi/server/openapi_server/labels.pkl', 'rb'))
+intents = json.loads(open('/workspaces/Chatbot_OpenAPI/openapi/server/openapi_server/intents.json').read())
+model = load_model('/workspaces/Chatbot_OpenAPI/openapi/server/openapi_server/chatbot_model.h5')
 
 
 def clean_up_sentence(sentence):
